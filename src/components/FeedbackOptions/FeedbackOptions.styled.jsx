@@ -2,33 +2,18 @@ import styled from "styled-components"
 
 
 export const FeedbackList = styled.ul`
-margin: 0;
+margin: 20px 0px 0px 0;
 padding: 0;
 list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-
+display: flex;
+justify-content: center;
+gap: 20px;
 `;
 
 export const FeedbackItem = styled.li`
-    margin-top: 20px;
 `;
 
 export const FeedbackButton = styled.button`
-  padding: 6px 20px;
-  border-radius: 30px;
-  background-color: ${props => {
-        if (props.name === 'good') {
-            return props.theme.colors.green;
-        }
-        if (props.name === 'neutral') {
-            return props.theme.colors.orange;
-        }
-        if (props.name === 'bad') {
-            return props.theme.colors.red;
-        }
-    }};
   background-image: 
   ${props => {
         if (props.children === 'good') {
@@ -41,6 +26,8 @@ export const FeedbackButton = styled.button`
             return props.theme.colors.buttonRed;
         }
     }};
+  padding: 6px 20px;
+  border-radius: 30px;
   background-position: 100% 0;
   background-size: 200% 200%;
   font-size: 20px;

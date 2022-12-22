@@ -4,7 +4,7 @@ import { Title } from "./Section.styled";
 
 
 const Section = ({ title, children }) => {
-    return <Box mx="auto" width={500} p={20} boxShadow='3px 20px 20px #888888' backgroundColor="#c5c5c5"
+    return <Box mx="auto" width={500} p={10} boxShadow='3px 20px 20px #888888' backgroundColor="#c5c5c5"
     >
         <Title>{title}</Title>
         {children}

@@ -1,24 +1,25 @@
 import { PropTypes } from "prop-types";
 import Box from "components/Box/Box";
+import { MdMoodBad, MdMood, MdSentimentNeutral } from "react-icons/md";
 import { StatisticsList, StatisticItem, StatisticText, TotalFeedbackList, TotalFeedbacItem, TotalFeedbacText } from './Statistics.styled';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
-    <Box>
-      <Box>
+    <Box ml={40} mt={20}>
+      <Box >
         <StatisticsList>
           <StatisticItem>
-            <StatisticText>Good: {good}</StatisticText>
+            <StatisticText> <MdMood color="green" /> Good: {good}</StatisticText>
           </StatisticItem>
           <StatisticItem>
-            <StatisticText>Neutral: {neutral}</StatisticText>
+            <StatisticText> <MdSentimentNeutral color="yellow" /> Neutral: {neutral}</StatisticText>
           </StatisticItem>
           <StatisticItem>
-            <StatisticText>Bad: {bad}</StatisticText>
+            <StatisticText> <MdMoodBad color="red" /> Bad: {bad}</StatisticText>
           </StatisticItem>
         </StatisticsList>
       </Box>
-      <Box>
+      <Box mt={20}>
         <TotalFeedbackList>
           <TotalFeedbacItem>
             <TotalFeedbacText>Total: {total}</TotalFeedbacText>
@@ -28,7 +29,7 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
           </TotalFeedbacItem>
         </TotalFeedbackList>
       </Box>
-    </Box>
+    </Box >
 
   );
 };
