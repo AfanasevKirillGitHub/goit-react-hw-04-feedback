@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 {
   /* <Statistics good={} neutral={} bad={} total={} positivePercentage={}>. */
 }
