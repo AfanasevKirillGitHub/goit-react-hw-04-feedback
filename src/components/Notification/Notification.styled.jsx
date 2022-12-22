@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-
 export const Message = styled.p`
-font-weight: bold;
   text-align: center;
-  color: red;
+  font-weight: ${props => props.theme.fontWeights.bold};
+  font-size: ${props => props.theme.fontSizes.l};
+  color: ${props => props.theme.colors.red};
 `;

@@ -1,4 +1,3 @@
-
 import { Component } from 'react';
 import Box from './Box/Box';
 import Section from './Section/Section';
@@ -36,33 +35,29 @@ export class App extends Component {
   };
 
   render() {
-
     return (
       <Box mt={50}>
-        <Section mt={50} title={"Please leave feedback"}>
+        <Section mt={50} title={'Please leave feedback'}>
           <FeedbackOptions
             options={Object.keys(this.state)}
             onLeaveFeedback={this.handleFeedback}
           />
         </Section>
 
-        <Section title={"Statistics"}>
-          {
-            this.countTotalFeedback()
-              ?
-              <Statistics
-                good={this.state.good}
-                neutral={this.state.neutral}
-                bad={this.state.bad}
-                total={this.countTotalFeedback()}
-                positivePercentage={this.countPositiveFeedbackPercentage()}
-              />
-              :
-              <Notification message={"No feedback given"} />
-          }
+        <Section title={'Statistics'}>
+          {this.countTotalFeedback() ? (
+            <Statistics
+              good={this.state.good}
+              neutral={this.state.neutral}
+              bad={this.state.bad}
+              total={this.countTotalFeedback()}
+              positivePercentage={this.countPositiveFeedbackPercentage()}
+            />
+          ) : (
+            <Notification message={'No feedback given'} />
+          )}
         </Section>
       </Box>
     );
   }
 }
-

@@ -1,21 +1,42 @@
-import { PropTypes } from "prop-types";
-import Box from "components/Box/Box";
-import { MdMoodBad, MdMood, MdSentimentNeutral } from "react-icons/md";
-import { StatisticsList, StatisticItem, StatisticText, TotalFeedbackList, TotalFeedbacItem, TotalFeedbacText } from './Statistics.styled';
+import { PropTypes } from 'prop-types';
+import Box from 'components/Box/Box';
+import {
+  BsEmojiAngryFill,
+  BsFillEmojiNeutralFill,
+  BsFillEmojiHeartEyesFill,
+} from 'react-icons/bs';
+import { FaPercentage } from 'react-icons/fa';
+import {
+  StatisticsList,
+  StatisticItem,
+  StatisticText,
+  TotalFeedbackList,
+  TotalFeedbacItem,
+  TotalFeedbacText,
+} from './Statistics.styled';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <Box ml={40} mt={20}>
-      <Box >
+      <Box>
         <StatisticsList>
           <StatisticItem>
-            <StatisticText> <MdMood color="green" /> Good: {good}</StatisticText>
+            <StatisticText>
+              {' '}
+              <BsFillEmojiHeartEyesFill color="green" /> Good: {good}
+            </StatisticText>
           </StatisticItem>
           <StatisticItem>
-            <StatisticText> <MdSentimentNeutral color="yellow" /> Neutral: {neutral}</StatisticText>
+            <StatisticText>
+              {' '}
+              <BsFillEmojiNeutralFill color="yellow" /> Neutral: {neutral}
+            </StatisticText>
           </StatisticItem>
           <StatisticItem>
-            <StatisticText> <MdMoodBad color="red" /> Bad: {bad}</StatisticText>
+            <StatisticText>
+              {' '}
+              <BsEmojiAngryFill color="red" /> Bad: {bad}
+            </StatisticText>
           </StatisticItem>
         </StatisticsList>
       </Box>
@@ -25,15 +46,16 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
             <TotalFeedbacText>Total: {total}</TotalFeedbacText>
           </TotalFeedbacItem>
           <TotalFeedbacItem>
-            <TotalFeedbacText>Positive feedback: {positivePercentage}%</TotalFeedbacText>
+            <TotalFeedbacText>
+              Positive feedback: {positivePercentage}
+              <FaPercentage />
+            </TotalFeedbacText>
           </TotalFeedbacItem>
         </TotalFeedbackList>
       </Box>
-    </Box >
-
+    </Box>
   );
 };
-
 
 Statistics.propTypes = {
   good: PropTypes.number.isRequired,
