@@ -12,6 +12,11 @@ export const theme = {
     red: '#E14817',
     mint: '#9dc5c9',
     lightBlue: '#ecf1f3',
+    buttonGreen:
+      'linear-gradient(45deg, #6ad779 0%, #33de6f 50%, #1c7800 100%)',
+    buttonOrange:
+      'linear-gradient(45deg, #d7c36a 0%, #dec433 50%, #784600 100%)',
+    buttonRed: 'linear-gradient(45deg, #d76a6a 0%, #de3333 50%, #780000 100%)',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {

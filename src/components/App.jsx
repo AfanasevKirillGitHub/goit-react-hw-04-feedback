@@ -1,5 +1,6 @@
 
 import { Component } from 'react';
+import Box from './Box/Box';
 import Section from './Section/Section';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
@@ -37,8 +38,8 @@ export class App extends Component {
   render() {
 
     return (
-      <>
-        <Section title={"Please leave feedback"}>
+      <Box mt={50}>
+        <Section mt={50} title={"Please leave feedback"}>
           <FeedbackOptions
             options={Object.keys(this.state)}
             onLeaveFeedback={this.handleFeedback}
@@ -60,7 +61,7 @@ export class App extends Component {
               <Notification message={"No feedback given"} />
           }
         </Section>
-      </>
+      </Box>
     );
   }
 }
