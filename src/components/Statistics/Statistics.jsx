@@ -1,7 +1,3 @@
-{
-  /* <Statistics good={} neutral={} bad={} total={} positivePercentage={}>. */
-}
-
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <div>
